@@ -16,14 +16,4 @@ jobs:
           distribution: "temurin"
       - uses: browser-actions/setup-chrome@latest
       - run: mvn clean test
-      - name: Test marketplace action
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        id: allure-report
-        with:
-          allure_results: build/allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-        
 
